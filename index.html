@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Bebe 🎂</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .message {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday, Bebe! 🎉</h1>
+  <p id="step1">Hi bebe, click mo muna ‘to para makita yung surprise! 💖</p>
+  <button id="btn1" onclick="nextStep(1)">Click Me</button>
+
+  <p id="step2" class="hidden">Hehe 😚 another click pa… ready ka na ba?</p>
+  <button id="btn2" class="hidden" onclick="nextStep(2)">Click Again</button>
+
+  <p id="step3" class="hidden">Last na ‘to promise 😘</p>
+  <button id="btn3" class="hidden" onclick="nextStep(3)">Final Click</button>
+
+  <div id="finalMessage" class="hidden message">
+    <p>Ala nakakainis naman di ko tuloy nasend kaagad kagabi kaya pinipigilan ko pa antok ko e. so ayun, happiest birthday, bebe! 🥰 idk pano ko ba sisimulan tong bati kasi baka same lang as before yung mga greetings ko sayo sa previous birthdays mo. pero syempre, may mga bagay talaga na never nagbabago like how super grateful and thankful pa rin ako na meron akong ikaw sa life ko. every birthday mo, gusto ko talaga na maramdaman mo how special this day is, kasi special ka sa’kin. kahit ngayon thru message lang tsaka na yung gift beb hehe, sana maramdaman mo pa rin how much you mean to me. u deserve all the happiness, love, and success in the world, kaya I’ll always hope na maachieve mo lahat ng goals mo at makuha lahat ng bagay na pinapangarap mo. gusto ko rin iremind ka na I appreciate everything u do for me, thank you sa love na binibigay mo sakin. at syempre yung love ko, sayo din yon lahat hindi mauubos at di mawawala. ang hard ng ldr setup natin, pero nakakaproud kasi kahit malayo tayo sa isa’t isa most of the time, we always find ways to make it work. kahit once a month lang tayo nagkikita, those moments mean so much to me. kahit minsan namimiss kita ng sobra, naiisip ko na worth it lahat ng waits ko kasi ikaw yung hinihintay ko. and no matter the distance, never nagbago yung love ko sayo mas lalo pa ngang lumalalim e. so on your special day, gusto ko lang ulit ipaalala na i'm so proud of u and i’ll always be here for u, supporting u, cheering for u, and loving u. happy happiest birthday ulit, bebe. hoping on more birthdays of u na magkasama natin maceleb at more memories na sabay nating ibuild hehe konting tiis nalang beb. i miss you so much and i love you so much!😚</p>
+  </div>
+
+  <script>
+    function nextStep(step) {
+      if (step === 1) {
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('btn1').classList.add('hidden');
+        document.getElementById('step2').classList.remove('hidden');
+        document.getElementById('btn2').classList.remove('hidden');
+      } else if (step === 2) {
+        document.getElementById('step2').classList.add('hidden');
+        document.getElementById('btn2').classList.add('hidden');
+        document.getElementById('step3').classList.remove('hidden');
+        document.getElementById('btn3').classList.remove('hidden');
+      } else if (step === 3) {
+        document.getElementById('step3').classList.add('hidden');
+        document.getElementById('btn3').classList.add('hidden');
+        document.getElementById('finalMessage').classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
